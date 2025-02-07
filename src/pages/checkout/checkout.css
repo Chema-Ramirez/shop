@@ -1,0 +1,98 @@
+.checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.checkout-container h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.checkout-container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.checkout-container ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-container ul li button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-container ul li button:hover {
+    background-color: #ff3333;
+}
+
+.checkout-container form {
+    display: grid;
+    gap: 15px;
+}
+
+.checkout-container form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-container label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.checkout-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.checkout-container input:focus {
+    border-color: #4c90e6;
+}
+
+.checkout-container button {
+    padding: 10px 20px;
+    background-color: #4c90e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-container button:hover {
+    background-color: #3c76c5;
+}
+
+.checkout-container .empty-cart {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+}

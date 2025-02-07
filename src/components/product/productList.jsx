@@ -1,10 +1,11 @@
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-import ProductCard from "./productCard";
-import products from "./products.json";
-import ProductsImages from "./productsimages.json";
+import Grid from "@mui/material/Grid"
+import Container from "@mui/material/Container"
+import ProductCard from "./productCard"
+import products from "./products.json"
+import ProductsImages from "./productsimages.json"
+import { useCart } from "../../context/CartContext"
 
-// Estructura del producto y la imagen del producto
+
 const productsWithImages = products.map((product) => {
   const image = ProductsImages.find(({ id }) => id === product.id);
   if (image) {
@@ -14,6 +15,12 @@ const productsWithImages = products.map((product) => {
 });
 
 const ProductsList = () => {
+  const { addProduct } = useCart()
+
+  const handleAddToCart = (product) => {
+    addProduct(product)
+  };
+
   return (
     <Container maxWidth="lg">
       {/* Contenedor de la lista de productos */}
@@ -21,7 +28,7 @@ const ProductsList = () => {
         {productsWithImages.map((product) => (
           <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
             {/* Tarjeta del producto */}
-            <ProductCard product={product} />
+            <ProductCard product={product} onAddToCart={() => handleAddToCart(product)} />
           </Grid>
         ))}
       </Grid>

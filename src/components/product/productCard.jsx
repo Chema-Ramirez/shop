@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 // components/ProductCard.jsx
 
-import React from "react";
 import {
   Card,
   CardContent,
@@ -12,8 +11,8 @@ import {
   CardActionArea,
 } from "@mui/material";
 
-// Componente para renderizar la tarjeta del producto
-const ProductCard = ({ product }) => {
+
+const ProductCard = ({ product, onAddToCart }) => {
   return (
     <Card
       sx={{
@@ -54,6 +53,14 @@ const ProductCard = ({ product }) => {
       </CardActionArea>
       <CardActions disableSpacing sx={{ justifyContent: "flex-end" }}>
         {/* Botón para añadir al carrito */}
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => onAddToCart(product)}
+          sx={{ borderRadius: "8px" }}
+        >
+          Add to Cart
+        </Button>
       </CardActions>
     </Card>
   );
